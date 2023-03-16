@@ -7,7 +7,6 @@ html {
 body {
     width: 80%;
     margin: 0 auto;
-    background-color: white;
     background-image: url("images/desert1.jpg");
     background-size: cover;
     background-attachment: fixed;
@@ -34,15 +33,11 @@ aside .whiteItem {
   color: rgb(255, 255, 255);
 }
 
-.whiteItem:hover {
+.whiteItem:hover, .whiteLink:hover {
   color: #fff;
   transition: .2s ease-in;
 }
 
-.whiteLink:hover {
-  color: #fff;
-  transition: .2s ease-in;
-}
 
 header {
   display: grid;
@@ -102,11 +97,7 @@ li:hover {
   font-size: 1.2rem;
   cursor: pointer;
   color: rgb(44, 69, 69);
-  
 }
-
-
-
 
 
 /* Display the burger icon instead of the nav menu on small screens */
@@ -325,6 +316,9 @@ footer{
   border-radius: 50%;
   }
 
+  button, div, a {
+  -webkit-tap-highlight-color: transparent;
+  }
 
   
  
