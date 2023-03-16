@@ -128,15 +128,15 @@ li:hover {
     height: 3px;
     background: rgb(255, 255, 255);
     margin: 4px 0;
-    transition: transform 0.1s ease-in-out;
+    transition: transform 0.4s ease-in-out;
   }
   
   .open .burger-menu-line:first-child {
-    transform: translateY(5.5px) rotate(45deg);
+    transform: translateY(5.5px) rotate(225deg);
   }
   
   .open .burger-menu-line:last-child {
-    transform: translateY(-6px) rotate(-45deg);
+    transform: translateY(-6px) rotate(-405deg);
   }
 
   #navList2 {
