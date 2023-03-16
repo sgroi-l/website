@@ -4,9 +4,11 @@ darkButton.addEventListener('click', darkMode);
 function darkMode() {
   let lightDark = document.body;
   lightDark.classList.toggle("darkBod");
+  
   let listItems = document.querySelectorAll('li');
   for (let i = 0; i < listItems.length; i++) {
     listItems[i].classList.toggle("whiteItem");
+  
   }
   let links = document.querySelectorAll('a');
   for (let i = 0; i < links.length; i++) {
@@ -37,21 +39,28 @@ const whyFAC = document.querySelector('#whyFAC');
 const why = document.querySelector('#why');
 const contact = document.querySelector('#contact');
 const third = document.querySelector('#third');
+const about2 = document.querySelector('#about2');
+const whyFAC2 = document.querySelector('#whyFAC2');
+const contact2 = document.querySelector('#contact2');
+
 
 function handleClick(event) {
   switch (event.target) {
     case about:
+    case about2:
       aboutMe.style.display = "block";
       why.style.display = "none";
       third.style.display = "none";
       console.log('hello');
       break;
     case whyFAC:
+      case whyFAC2:
       why.style.display = "block";
       aboutMe.style.display = "none";
       third.style.display = "none";
       break;
     case contact:
+    case contact2:
       third.style.display = "block";
       why.style.display = "none";
       aboutMe.style.display = "none";
@@ -64,12 +73,21 @@ function handleClick(event) {
 about.addEventListener('click', handleClick);
 whyFAC.addEventListener('click', handleClick);
 contact.addEventListener('click', handleClick);
+about2.addEventListener('click', handleClick);
+whyFAC2.addEventListener('click', handleClick);
+contact2.addEventListener('click', handleClick);
 
 
 
-/* const burger = document.querySelector('.burger');
-const nav = document.querySelector('nav');
+const burgerMenu = document.querySelector('.burger-menu');
 
-burger.addEventListener('click', () => {
-  nav.classList.toggle('active');
-}); */
+burgerMenu.addEventListener('click', () => {
+  burgerMenu.classList.toggle('open');
+});
+
+var button = document.getElementById("burger");
+var div = document.querySelector(".openBurger");
+
+button.addEventListener("click", function() {
+  div.classList.toggle("openBurger")
+});

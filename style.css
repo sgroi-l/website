@@ -1,6 +1,5 @@
 html {
     font-size: 10px;
-    margin: 0;
     font-family: 'Poppins', sans-serif;
 
 }
@@ -8,7 +7,6 @@ html {
 body {
     width: 80%;
     margin: 0 auto;
-    color: black;
     background-color: white;
     background-image: url("images/desert1.jpg");
     background-size: cover;
@@ -24,12 +22,26 @@ body {
   background-position: center;
 }
 
+.whiteItem {
+  color: rgb(82, 129, 129);
+}
+
+.whiteItem a {
+  color: rgb(82, 129, 129);
+}
+
+aside .whiteItem {
+  color: rgb(255, 255, 255);
+}
+
 .whiteItem:hover {
   color: #fff;
+  transition: .2s ease-in;
 }
 
 .whiteLink:hover {
   color: #fff;
+  transition: .2s ease-in;
 }
 
 header {
@@ -40,12 +52,12 @@ header {
 h1 {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
-    font-size: min(8vw, 8em);
+    font-size: min(10vw, 8rem);
 }
 
 nav {
     width: 100%;
-    color: rgb(69, 116, 116);
+    color: rgb(65, 101, 101);
     text-decoration: none;
 }
 
@@ -53,13 +65,14 @@ nav li {
   transition: .2s ease-out ;
 }
 
-nav li:hover {
+li:hover {
   cursor: pointer;
   color: black;
   transition: .2s ease-in;
 }
+
  
-nav ul  {
+#navList  {
     list-style: none;
     font-size: 1.5rem;
     width: 100%; 
@@ -68,6 +81,91 @@ nav ul  {
     grid-template-columns: 1fr 2fr 1fr;
     column-gap: 3rem;
     text-align: center;
+}
+
+.burger-menu {
+  display: none;
+}
+
+.burger-menu:focus + #navList {
+  display: block;
+}
+
+.openBurger {
+  display: none;
+}
+
+
+#navList2 {
+  list-style: none;
+  line-height: 2rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: rgb(44, 69, 69);
+  
+}
+
+
+
+
+
+/* Display the burger icon instead of the nav menu on small screens */
+@media screen and (max-width: 600px) {
+  #navList {
+    display: none;
+  }
+
+  #navList2 {
+    display: block;
+  }
+  .burger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    right: 1rem;
+  }
+  
+  .burger-menu-line {
+    width: 20px;
+    height: 3px;
+    background: rgb(255, 255, 255);
+    margin: 4px 0;
+    transition: transform 0.1s ease-in-out;
+  }
+  
+  .open .burger-menu-line:first-child {
+    transform: translateY(5.5px) rotate(45deg);
+  }
+  
+  .open .burger-menu-line:last-child {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  #navList2 {
+    display: block;
+    position: fixed;
+    top: 1%;
+    right: 0;
+    z-index: 1;
+    }
+
+}
+
+ 
+@media screen and (min-width: 601px) {
+  #navList {
+    display: grid;
+  }
+  #navList2 {
+    display: none;
+  }
 }
 
 p {
@@ -79,7 +177,7 @@ h2 {
 }
 
 a {
-  color: darkslategray;
+  color: rgb(65, 101, 101);
   text-decoration: none;
   transition: .2s ease-out ;
 }
@@ -117,8 +215,32 @@ aside {
    padding-left: 2rem;
 }
 
+@media (max-width: 415px) {
+  aside {
+    
+    padding-left: 0.1rem;
+    margin: 0;
+  }
+
+  aside h2 {
+    font-size: 1rem;
+  }
+
+  aside a {
+    font-size: 1rem;
+  }
+}
+
 ul {
     padding: 1rem;
+}
+
+#why {
+  display: none;
+}
+
+#third {
+  display: none;
 }
 
 
@@ -144,6 +266,8 @@ footer{
     width: 1.5rem;
     margin-left: 1rem;
 }
+
+/* CSS for the dark/light mode button  */
 
 .switch {
     position: absolute;
@@ -200,3 +324,7 @@ footer{
   .slider:before {
   border-radius: 50%;
   }
+
+
+  
+ 
