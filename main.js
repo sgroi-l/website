@@ -51,10 +51,10 @@ function handleClick(event) {
       aboutMe.style.display = "block";
       why.style.display = "none";
       third.style.display = "none";
-      console.log('hello');
+      console.log('First case');
       break;
     case whyFAC:
-      case whyFAC2:
+    case whyFAC2:
       why.style.display = "block";
       aboutMe.style.display = "none";
       third.style.display = "none";

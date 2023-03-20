@@ -180,8 +180,10 @@ a:hover {
 }
 
 .aside {
+  width: 100%;
   border-left: 2px solid black;
   padding-left: 3rem;
+  padding-right: 5rem;
   
 }
 
@@ -197,13 +199,14 @@ a:hover {
   }
 
 main {
-    flex: 4;
+   flex: 4;
 }
   
 aside {
    flex: 1;
    margin-left: 3rem;
    padding-left: 2rem;
+   
 }
 
 @media (max-width: 415px) {
@@ -251,8 +254,6 @@ footer{
 }
   
 .twitter-logo {
-   
-
     height: 1.5rem;
     width: 1.5rem;
     margin-left: 1rem;
