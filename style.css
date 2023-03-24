@@ -108,7 +108,12 @@ li:hover {
 
   #navList2 {
     display: block;
-  }
+     position: fixed;
+    top: 1%;
+    right: 0;
+    z-index: 1;
+    }
+  
   .burger-menu {
     display: flex;
     flex-direction: column;
@@ -138,14 +143,6 @@ li:hover {
   .open .burger-menu-line:last-child {
     transform: translateY(-6px) rotate(-405deg);
   }
-
-  #navList2 {
-    display: block;
-    position: fixed;
-    top: 1%;
-    right: 0;
-    z-index: 1;
-    }
 
 }
 

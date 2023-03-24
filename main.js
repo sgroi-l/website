@@ -1,23 +1,30 @@
+// Selects the element with ID "darkModeToggle" and adds an event listener to it that calls the darkMode function when clicked
 let darkButton = document.querySelector('#darkModeToggle');
 darkButton.addEventListener('click', darkMode);
 
 function darkMode() {
+  // Selects the body element and toggles the "darkBod" class
   let lightDark = document.body;
   lightDark.classList.toggle("darkBod");
   
+  // Selects all list items and toggles the "whiteItem" class for each one
   let listItems = document.querySelectorAll('li');
   for (let i = 0; i < listItems.length; i++) {
     listItems[i].classList.toggle("whiteItem");
-  
   }
+
+  // Selects all links and toggles the "whiteLink" class for each one
   let links = document.querySelectorAll('a');
   for (let i = 0; i < links.length; i++) {
     links[i].classList.toggle("whiteLink");
   }
+
+  // Selects the element with ID "darkModeToggle" and checks if it is checked. If it is, sets a local storage item to true
   let isChecked = document.querySelector('#darkModeToggle').checked;
   localStorage.setItem('isDarkMode', isChecked);
 }
 
+// Checks if a local storage item called "isDarkMode" is set to true. If it is, adds classes to elements as in the dark mode state
 if (localStorage.getItem('isDarkMode') === 'true') {
   document.body.classList.add('darkBod');
   let listItems = document.querySelectorAll('li');
@@ -28,6 +35,8 @@ if (localStorage.getItem('isDarkMode') === 'true') {
   for (let i = 0; i < links.length; i++) {
     links[i].classList.add("whiteLink");
   }
+
+  // Sets the element with ID "darkModeToggle" to checked if local storage item is set to true and unchecked if false.
   document.querySelector('#darkModeToggle').checked = true;
 } else {
   document.querySelector('#darkModeToggle').checked = false;
