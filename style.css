@@ -48,6 +48,7 @@ h1 {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-size: min(10vw, 8rem);
+    caret-color: transparent;
 }
 
 nav {
@@ -56,8 +57,9 @@ nav {
     text-decoration: none;
 }
 
-nav li {
+li {
   transition: .2s ease-out ;
+  caret-color: transparent;
 }
 
 li:hover {
@@ -80,6 +82,7 @@ li:hover {
 
 .burger-menu {
   display: none;
+
 }
 
 .burger-menu:focus + #navList {
