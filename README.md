@@ -21,7 +21,7 @@ I spent a long time viewing different websites and studying the elements I liked
 
 ### Light/Dark Mode
 
-I wanted to build a toggle to switch between a light and dark mode, this felt like a good tool to show some creativity and a useful way to learn more CSS as most of the CSS I'd used in projects upto this point had been more straightforward. I decided to make my switch from a checkbox `input` as this way I could have two modes, checked (light) and unchecked (dark).
+I wanted to build a toggle to switch between a light and dark mode, this felt like a good tool to show some creativity and a useful way to learn more CSS as most of the CSS I'd used in projects up to this point had been more straightforward. I decided to make my switch from a checkbox `input` as this way I could have two modes, checked (light) and unchecked (dark).
 
 I added a span to the container the `input` was inside, which I then styled by adding a background image that I made of a sun and a moon using GIMP. When the label was checked I used CSS to move the span (`.slider`) left and right, which creates the effect of a switch being flicked.
 
